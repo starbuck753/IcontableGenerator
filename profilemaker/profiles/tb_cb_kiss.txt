@@ -1,0 +1,7 @@
+<table align=center bgcolor="#ffffff" cellspacing="0" cellpadding="0"><tr><td><table cellpadding="0" cellspacing=4 width=660><tr><td><img src="http://i.imgur.com/ReIeW.png"></td></tr></table></td></tr><tr><td><table cellpadding="6" cellspacing=4 width=668><tr bgcolor="#8db2d2"><td align=right colspan=2><font face="georgia, times new roman" size=6 color="#ffffff">. title#1 .</font></td></tr><tr><td align="right" valign=top bgcolor="#f7f7f7" colspan=2><p><font face="tahoma, arial" color="#6f6b64" size="1">
+text#1
+</font></p></td></tr><tr bgcolor="#9cc4e8"><td align=right><font face="georgia, times new roman" size=5 color="#ffffff">. title#2 .</font></td><td align=right width=300><font face="georgia, times new roman" size=5 color="#ffffff">. title#3 .</font></td></tr><tr bgcolor="#f7f7f7"><td align="center" valign=top><p><font face="tahoma, arial" color="#6f6b64" size="1">
+text#2
+</font></p></td><td><p align=center><font face="tahoma, arial" color="#6f6b64" size="1">
+text#3
+</font></p></td></tr><tr bgcolor="#ffffff" height=35><td align="justify" valign=top bgcolor="#f7f7f7" colspan=2><p><font face="tahoma,verdana" color="#8db2d2" size="1"><center>. <a href="http://community.livejournal.com/nutty_musings/"><font face="georgia, times new roman" color="#8db2d2" size="3">Profile Info by NuttyMusings</font></a> .</center></font></p></td></tr></table></td></tr></table>
