@@ -1,0 +1,27 @@
+<script language="JavaScript" type="text/javascript">
+<!-- Copyright 2003, Sandeep Gangadharan -->
+<!-- For more free scripts go to http://sivamdesign.com/scripts/ -->
+<!--
+
+function checkForm() {
+ document.form.Email.value = " " + document.form.Email.value;
+
+  if (document.form.Name.value == "") {                      // this part of the script is
+      alert('The Name field is empty!'); return false; }     // related to the Name field
+
+  mail = document.form.Email.value;                            // this part of the script is
+  if ((mail.indexOf('@') == -1) || (mail.indexOf('.') == -1)) {
+      alert('The E-mail address is invalid!'); return false; } // related to the E-Mail field
+
+  if (document.form.Message.value == "") {                       // this part of the script is
+      alert('The Message field is empty!'); return false; }
+
+  document.form.AppName.value = navigator.appName;
+  document.form.AppVersion.value = navigator.appVersion;
+  document.form.Resolution.value = window.screen.width + " X " + window.screen.height;
+
+  return true;
+ }
+
+// -->
+</script>

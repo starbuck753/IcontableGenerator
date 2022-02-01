@@ -1,0 +1,101 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE>Votes Counter - by sql_girl</TITLE>
+<LINK href="../mainstyle.css" type=text/css rel=stylesheet>
+<link rel="stylesheet" href="../js/flexslider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="funcs.js"></script>
+<script type="text/javascript" src="../mainfuncs.js"></script>
+</head>
+<BODY bgcolor=#fafae1 LANGUAGE=javascript>
+
+<DIV class="main">
+<DIV class="header">
+	<script type="text/javascript">
+        writepics(0);
+    </script>
+</DIV>
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+<!-- FlexSlider -->
+<script defer src="../js/jquery.flexslider.js"></script>
+
+<script type="text/javascript">
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide",
+    animationLoop: true,
+    itemWidth: 100,
+    itemMargin: 5,
+  });
+});
+</script>
+
+
+<DIV class="sidebar">
+<div class=menubacknav align=center><A href="http://silvinscorner.awardspace.com/">Home</A></div>
+<div class=menubacknav align=center><A href="http://silvinscorner.awardspace.com/icontable/">Icon Table Generator</A></div>
+<div class=menubacknav align=center><A href="http://silvinscorner.awardspace.com/bannertable/">Picspam Generator</A></div>
+<div class=menubacknav align=center><A href="http://silvinscorner.awardspace.com/profilemaker/">Profile Generator</A></div>
+<div class=menubacknav align=center><A href="http://silvinscorner.awardspace.com/votecounter/">Votes Counter</A></div>
+<br>
+<div class=menuback align=center><A href="http://sql-girl.livejournal.com/" target=blank_>sql_girl @ livejournal</A></div>
+<div class=menuback align=center><A href="http://community.livejournal.com/nutty_musings/" target=blank_>nutty musings @ livejournal</A></div>
+<!--<p align=right>Any suggestion, question or comment are always welcome.</p><p>So feel free to leave me some feedback <a href="feedback.htm">here</a> :) </p>-->
+<br>
+<div class=menubackfb><p>Any suggestion, question or comment are always welcome.<br><br>So feel free to leave me some feedback <a href="http://silvinscorner.awardspace.com/feedback/">here</a> :)</p></div>
+<div class=menubackcred><p>Are you looking for fanart?<br>Check out <A href="http://community.livejournal.com/nutty_musings/" target=blank_>nutty_musings</A><br><br>There you will find all of <a href="http://geekluvinskater.livejournal.com" target=blank_>geekluvinskater</a>'s<br>art and mine!</p></div>
+<p class=menutitle></p>
+<p><script type="text/javascript">
+  <!-- 
+  lastModified();
+  // -->
+</script></p>
+</DIV>
+<DIV class="content" id=DIV1>
+<h1 id="start">Votes Counter <font size=1 face=tahoma>[by sql_girl@livejournal]</font></h1>
+<p>This has been specially made to make life easier if you are running some kind of Icontest Comm or any kind of Challenge Comm where you use polls to decide the winners.</p>
+<p></p>
+<h2 id="howto">Instructions</h2>
+<p>1. Enter the vote list, separating the votes by '<strong>,</strong>'.<br></p>
+<p>Example:<br>
+<blockquote>12, 3, 7<br>
+4, 7, 9<br>
+10, 20, 14</blockquote><br>
+<p><strong>NOTE:</strong> To make this step easier, you can just copy the whole text from the Poll section and then use the "Clean Text" button to take out all unnecessary text.</p>
+<blockquote>sql_girl -- 18,13,7<br>
+vanyx -- 05, 07, 22<br>
+n510310ltbc -- 17, 15, 7<br>
+perscutdoranges -- 5, 7, 11<br>
+elfennau -- 5, 11, 16<br>
+alwaysashipper -- 23, 13, 21<br>
+loka_bones -- 6,7,1<br>
+archemicstar -- 07,21,15</blockquote><br>
+<P></P>
+<p>2. Enter the <strong>Total Count</strong> (total number of items participating in the poll) and <strong>Voting System</strong>.</p><p>In the Voting System enter the values separated by '<strong>,</strong>', being the points each item will receive depending the order of the voting (eg. 3, 2, 1 means the first item will receive 3 points, the second one 2 and the last one 1).The Voting System </p>
+<p>The Voting System can consist of ANY number of values. For example, it could be "2,1" or "5,4,3,2,1". However, its important that the Votes List and the Voting System have the same number of values. If not, some votes could be ignored.</p>
+<p>3. Then press <strong>Count</strong> and you will obtain the Voting Results below.</p>
+<p align=right><A href="#start">[Back to the top]</A></p>
+<h2 id="howto">Entering Votes</h2>
+<table>
+<tr><td valign=top>Voting:</td><td><TEXTAREA id=txtVotes style="WIDTH: 357px; HEIGHT: 127px" rows=6 cols=38></TEXTAREA></td></tr>
+<tr><td valign=top colspan=2 align=right><INPUT language=javascript id=btnClean onClick="return btnClean_onclick()" type=button value="Clean Text" name=btnClean></td></tr>
+<tr><td valign=top>Total Count:</td><td><INPUT id=txtCant 
+      style="WIDTH: 95px; HEIGHT: 19px" size=13></td></tr>
+<tr><td valign=top>Voting System:</td><td><INPUT id=txtValues 
+      style="WIDTH: 95px; HEIGHT: 19px" size=13> (default system is 3,2,1)</td></tr>
+<tr><td valign=top colspan=2 align=right><INPUT language=javascript id=btnCount onClick="return btnCount_onclick()" type=button value=Count name=btnCount></td></tr></table>
+<p align=right><A href="#start">[Back to the top]</A></p>
+<h2 id="results">Voting Results</h2>
+<table><tr><td>
+<div id="resultado" class=result></div>
+</td></tr></table>
+<br>
+<p align=right><A href="#start">[Back to the top]</A></p>
+<p class="footer">Votes Counter Copyright © 2007 by sql_girl</p>
+</DIV></DIV>
+</body>
+</html>
