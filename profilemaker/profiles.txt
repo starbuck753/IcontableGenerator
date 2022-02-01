@@ -1,0 +1,8 @@
+tb_cb_kiss_pvw.png |tb_cb_kiss
+tb_cb_pool_pvw.png |tb_cb_pool
+tb_ns_bite_pvw.png |tb_ns_bite
+tb_ns_cute_pvw.png |tb_ns_cute
+tb_ns_desk_pvw.png |tb_ns_desk
+tb_ns_hold_pvw.png |tb_ns_hold
+tb_ns_kiss_pvw.png |tb_ns_kiss
+tb_ns_phone_pvw.png |tb_ns_phone

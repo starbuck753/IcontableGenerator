@@ -1,0 +1,111 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE>Profile Generator - by sql_girl</TITLE>
+<LINK href="../mainstyle.css" type=text/css rel=stylesheet>
+<link rel="stylesheet" href="../js/flexslider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="funcs.js"></script>
+<script type="text/javascript" src="../mainfuncs.js"></script>
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+
+
+function txtCode_onfocus() {
+	txtCode.select(txtCode.innerText);
+}
+
+function txtCode_onclick() {
+	txtCode.select(txtCode.innerText);
+}
+
+
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY bgcolor=#fafae1 LANGUAGE=javascript onLoad="return pageSelect(1);">
+
+<DIV class="main">
+<DIV class="header">
+	<script type="text/javascript">
+        writepics(0);
+    </script>
+</DIV>
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+<!-- FlexSlider -->
+<script defer src="../js/jquery.flexslider.js"></script>
+
+<script type="text/javascript">
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide",
+    animationLoop: true,
+    itemWidth: 100,
+    itemMargin: 5,
+  });
+});
+</script>
+
+
+<DIV class="sidebar">
+<div class=menubacknav align=center><A href="http://silvinscorner.awardspace.com/">Home</A></div>
+<div class=menubacknav align=center><A href="http://silvinscorner.awardspace.com/icontable/">Icon Table Generator</A></div>
+<div class=menubacknav align=center><A href="http://silvinscorner.awardspace.com/bannertable/">Picspam Generator</A></div>
+<div class=menubacknav align=center><A href="http://silvinscorner.awardspace.com/profilemaker/">Profile Generator</A></div>
+<div class=menubacknav align=center><A href="http://silvinscorner.awardspace.com/votecounter/">Votes Counter</A></div>
+<br>
+<div class=menuback align=center><A href="http://sql-girl.livejournal.com/" target=blank_>sql_girl @ livejournal</A></div>
+<div class=menuback align=center><A href="http://community.livejournal.com/nutty_musings/" target=blank_>nutty musings @ livejournal</A></div>
+<!--<p align=right>Any suggestion, question or comment are always welcome.</p><p>So feel free to leave me some feedback <a href="feedback.htm">here</a> :) </p>-->
+<br>
+<div class=menubackfb><p>Any suggestion, question or comment are always welcome.<br><br>So feel free to leave me some feedback <a href="http://silvinscorner.awardspace.com/feedback/">here</a> :)</p></div>
+<div class=menubackcred><p>Are you looking for fanart?<br>Check out <A href="http://community.livejournal.com/nutty_musings/" target=blank_>nutty_musings</A><br><br>There you will find all of <a href="http://geekluvinskater.livejournal.com" target=blank_>geekluvinskater</a>'s<br>art and mine!</p></div>
+<p class=menutitle></p>
+<p><script type="text/javascript">
+  <!-- 
+  lastModified();
+  // -->
+</script></p>
+</DIV>
+<DIV class="content" id=DIV1>
+<p id="start"><h1>Profile Generator <font size=1 face=tahoma>[by sql_girl@livejournal]</font></h1>
+<p>You can just pick an existing layout from the list below to generate your profile.</p>
+<!--<p>You can also check the <A href="profilegen.htm">Type Selection</A> section where you can personalize your Profile, using a base code and changing all properties to make it look exactly how you want :)</p>-->
+<P></P><input type="hidden" id="PageId" value="1">
+<h2>Profile Selection</h2>
+<p>If you dont know how to start, see <A href="#howto">instructions</A> on how to use.</p>
+<p id="tabProfile"></p>
+
+<p>Select the profile you want to use. In the next section you can set the Titles and Texts.</p>
+
+<!--<p><table><tr><td class="clink">Show Example</td><td>Hide Example</td></tr></table>
+<p id="example"></p>-->
+
+<h2>Settings</h2>
+<table>
+<TR><td>Title #1:</td><td><INPUT id="txtTitle1" style="WIDTH: 500px; HEIGHT: 22px" size =48></td></TR>
+<TR><td valign=top>Text #1:</td><td><TEXTAREA id="txtText1" style="WIDTH: 500px; HEIGHT: 110px" size =48></TEXTAREA></td></TR>
+<TR><td>Title #2:</td><td><INPUT id="txtTitle2" style="WIDTH: 500px; HEIGHT: 22px" size =48></td></TR>
+<TR><td valign=top>Text #2:</td><td><TEXTAREA id="txtText2" style="WIDTH: 500px; HEIGHT: 110px" size =48></TEXTAREA></td></TR>
+<TR><td>Title #3:</td><td><INPUT id="txtTitle3" style="WIDTH: 500px; HEIGHT: 22px" size =48></td></TR>
+<TR><td valign=top>Text #3:</td><td><TEXTAREA id="txtText3" style="WIDTH: 500px; HEIGHT: 110px" size =48></TEXTAREA></td></TR>
+<tr><td colspan=2><br></td></tr>
+<tr><td align="right" colspan=2><P><INPUT id="btnPreview" type=button value="Preview" LANGUAGE=javascript onClick="return preview()"></P></td></tr></table><!-- </DIV><HR><DIV class="content"> -->
+<p><h2 id="preview">Profile Preview</h2>
+<P><input type="hidden" id="selProfile"><input type="hidden" id="strTexto"></P>
+<p id="lblTable"></p>
+<br>
+<P align=left><TEXTAREA language=javascript id=txtCode style="WIDTH: 570px; HEIGHT: 152px" onFocus="return txtCode_onfocus()" onClick="return txtCode_onclick()" rows=8 cols=40></TEXTAREA>&nbsp;</P><!-- </DIV><HR><DIV class="content"> -->
+<p align=right><A href="#start">[Back to the top]</A></p>
+<p><h2 id="howto">Instructions</h2>
+<P></P>
+<p>Select the Profile Layout you like and then set the different Titles and Texts you want to visualize in the profile. When you press "Preview" you can see how the profile will look.</p>
+<p>In any moment you can change the selected profile and the Settings wont be deleted. This way you can check the different Profiles withot needing to write everything more than once.</p>
+<p align=right><A href="#start">[Back to the top]</A></p>
+<p class="footer">Profile Generator Copyright © 2012 by sql_girl</p>
+</DIV></DIV></BODY>
+</HTML>
