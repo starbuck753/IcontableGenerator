@@ -1,1 +1,1 @@
-# icontable_generator
+# Icontable Generator
