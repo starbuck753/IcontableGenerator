@@ -1,0 +1,180 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE>Icon Table Generator - by sql_girl</TITLE>
+	<LINK href="../mainstyle.css" type=text/css rel=stylesheet>
+	<link href="https://fonts.googleapis.com/css?family=Dosis|Ubuntu" rel="stylesheet">
+	<script type="text/javascript" src="funcs.js"></script>
+	<script type="text/javascript" src="../mainfuncs.js"></script>
+
+</HEAD>
+
+<BODY LANGUAGE=javascript>
+	<header>
+		<nav>		
+			<script> 
+				writemenunav("icontable");
+			</script>
+		</nav>
+	</header>
+
+	<main>
+		<div class="titlebox">
+			<span class="title">[ Icon Table Generator ]</span>
+		</div>
+
+		<p id ="start">
+		<p>With this generator, you can create personalized tables to show not only icons but any kind of graphics. 
+		For bigger graphics you can have thumbnails to make the table look better. <br>You can set backgrounds, colors, numbers, borders.</p>
+		<P></P>
+		<h2>-- Uploads and Settings --</h2>
+		<p>If you dont know how to start, check out the <A href="#howto">instructions</A> on how to use.</p>
+		<section class="table">
+			<label for="cmbType">Uploading Type:</label>
+			<div>
+				<SELECT id="cmbType" onChange="return cmbType_onchange()">
+					<OPTION selected index="0">Single Upload</OPTION>
+					<OPTION index="1">Multiple Upload</OPTION>
+				</SELECT>
+			</div>
+			<div></div>
+
+			<label id="lblTypeTitle">Image Url:</label>
+			<div>
+				<LABEL id="lblTypeText">
+					<INPUT class="ginput" id="txtImg" onKeyDown="return enter_url(event)">
+				</LABEL>
+			</div>
+			<div class="gbutton"><INPUT id="btnAdd" type=button value="Add" onClick="return btnAdd_onclick()"></div>
+
+			<label for="lstUrls">All Images:</label>
+			<div>
+				<SELECT class="ginput" id="lstUrls" style="HEIGHT: 134px" multiple onkeydown="return elimina(event)"></SELECT>
+			</div>
+			<div class="gbutton">
+				<INPUT id="btnUp" type=button value="Up" onClick="return btnUp_onclick()">
+				<INPUT id="btnDown" type=button value="Down" onClick="return btnDown_onclick()">
+				<INPUT id="btnDelete" type=button value="Delete" onClick="return btnDelete_onclick()">
+			</div>
+
+			<label for="cmbCols">Images per row: </label>
+			<div><SELECT id="cmbCols" style="WIDTH: 59px">
+				<OPTION selected value=1>1</OPTION>
+				<OPTION value=2>2</OPTION>
+				<OPTION value=3>3</OPTION>
+				<OPTION value=4>4</OPTION>
+				<OPTION value=5>5</OPTION>
+				<OPTION value=6>6</OPTION>
+				<OPTION value=7>7</OPTION>
+			</SELECT></div>
+			<div></div>
+
+			<label for="txtBgColor">Table Background Color:</label>
+			<div><INPUT id="txtBgColor" style="WIDTH: 130px"> (eg. #000000)</div>
+			<div></div>
+
+			<label for="cmbAlign">Table Alignment:</label>
+			<div><SELECT name="cmbAlign" id="cmbAlign" style="WIDTH: 124px" onChange="return cmbType_onchange()">
+				<option selected>Left</option>
+				<option>Center</option>
+				<option>Right</option>
+			</SELECT></div>
+			<div></div>
+			
+			<!--<div><td>Outgoing code for:</td><td><p><SELECT id="cmbCodeType" style="WIDTH: 124px"><OPTION selected index="0">Websites</OPTION><OPTION index="1">Forums</OPTION></SELECT></p></td></div>-->
+			
+			<label for="chkBorder">Image Border:</label>
+			<div><INPUT type="checkbox" id="chkBorder" name=chkBorder onClick="return chkBorder_onclick()"></div>
+			<div></div>
+			
+			<label for="txtBorColor">Image Border Color:</label>
+			<div><INPUT id="txtBorColor" style="WIDTH: 130px"> (eg. #000000)</div>
+			<div></div>
+			
+			<div class="gtitle"><h4>Settings for tables with Numbers:</h4></div>
+			<label for="cmbPos">Numbers Position:</label>
+			<div><SELECT id="cmbPos" style="WIDTH: 140px">
+				<OPTION selected index="0">None</OPTION>
+				<OPTION index="1">On the left of each icon</OPTION>
+				<OPTION index="2">Under each icon</OPTION>
+				<OPTION index="3">Above each icon</OPTION>
+			</SELECT></div>
+			<div></div>
+
+			<label for="txtCellColor">Cells Background Color:</label>
+			<div><INPUT id="txtCellColor" style="WIDTH: 130px"> (eg. #000000)</div>
+			<div></div>
+
+			<label for="txtFontColor">Font Color:</label>
+			<div><INPUT id="txtFontColor" style="WIDTH: 130px"> (eg. #000000)</div>
+			<div></div>
+
+			<label for="txtStartNumber">Start Number:</label>
+			<div><INPUT id="txtStartNumber" style="WIDTH: 130px" maxLength=15 value=1></div>
+			<div></div>
+
+			<label for="txtOptText">Optional Text Before Number:</label>
+			<div><INPUT id="txtOptText" style="WIDTH: 130px" maxLength=15> (eg. 'Picture', '#', etc.)</div>
+			<div></div>
+			
+			<div class="gtitle"><h4>Settings for tables with bigger images (banners, headers, etc):</h4></div>
+			<label for="chkThumb">Make Thumbnails:</label>
+			<div><INPUT type=checkbox id="chkThumb" name=chkThumb onClick="return chkThumb_onclick()"></div>
+			<div></div>
+
+			<label for="txtWidth">Thumbnails width:</label>
+			<div><INPUT id="txtWidth" style="WIDTH: 130px"> Default Value = 230</div>
+			<div></div>
+			
+			<label for="chkLink">Link to the image:</label>
+			<div><INPUT type=checkbox id="chkLink" name=chkLink></div>
+			<div></div>
+
+			<div class="gbutton">
+				<INPUT id="btnPreview" type=button value="Preview" onClick="return preview()">
+				<INPUT id="btnClear" type=button value="Clear" onClick="return btnClear_onclick()">
+			</div>
+		</section>
+
+		<h2 id="preview">-- Table Preview --</h2>
+		<P></P>
+		<p id="lblTable">(no preview)</p>
+		<h2>-- Table Code --</h2>
+		<P align=left><TEXTAREA id=txtCode style="WIDTH: 570px; HEIGHT: 152px" onFocus="return txtCode_onfocus()" onClick="return txtCode_onclick()" rows=8 cols=40></TEXTAREA>&nbsp;</P><!-- </DIV><HR><DIV class="content"> -->
+		<p align=right><A href="#start">[Back to the top]</A></p>
+		
+		<h2 id="howto">-- Instructions --</h2>
+		<P></P>
+		<p>Paste the image url in the text box and click on "Add". The image will 
+		be added to the Images List and the Table Code will be updated in the Preview section.</p>
+		<p>You can chose between "Single Uploading" and "Multiple Uploading". Using the "Multiple Uploading", you can upload more than one picture in just one step.
+		Paste the Images Urls separated by ";" then press "Add" and all the pictures will be uploaded.</p>
+		<p>Chose how many columns you want for the table. Tables can have from 1 to 7 columns. 
+		You can also set the background color for the table. This optiont is optional.</p><!--<p>Then you need to chose between Websites Code or Forums Code. The first one uses HTML tags (eg. &lt;table&gt;, &lt;img&gt;, etc), the second one is 
+		prepare to work in Forums posts using tags like [link], [img], etc.</P> -->
+		<p>In any moment you can sort the images in the list using de "Up" and "Down" buttons. You can also delete any image by selecting it and click on "Delete". 
+		You can also delete them all at once by selecting all of them.</p>
+		<p>After changing any of the preferences, you can click on "Preview" to see the Table updated. Click on "Clear" to
+		clear Table Code box.</p>
+		<br>
+		<h4>Tables with Numbers:</h4>
+		<p>There is the posibility of setting cells with numbers. This can be placed on the left, above or under the images.
+		If you chose to have numbers you can set the color for backgrounds and fonts. Again, color settings are optional.</p>
+		<p>You can also set a Start Number in case 
+		you want the first number to be other than 1.</p>
+		<br>
+		<h4>Tables with with bigger images:</h4>
+		<p>You can also make tables for bigger images like banners, headers, wallpapers, etc. For this, you can check 
+		the "Make Thumbnails" option and set the width for those thumbnails. If you dont set a width, 
+		by default thumbnails width will be 230 pixels.</p>
+		<p>You can add a link to the image by checking the "Link to the image" option.</p>
+		<p align=right><A href="#start">[Back to the top]</A></p>
+
+	</main>
+	<footer>
+		<div class="footerbox">
+			<span class="footer">[ Copyright 2007 by sql_girl ]</span>
+		</div>
+	</footer>
+</BODY>
+</HTML>
