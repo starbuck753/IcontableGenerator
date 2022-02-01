@@ -1,0 +1,224 @@
+<HTML>
+<HEAD>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109992404-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109992404-1');
+</script>
+
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE>Icon Table Generator - by sql_girl</TITLE>
+<LINK href="../mainstyle.css" type=text/css rel=stylesheet>
+<link rel="stylesheet" href="../js/flexslider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="funcs.js"></script>
+<script type="text/javascript" src="../mainfuncs.js"></script>
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+
+function window_onload() {
+
+txtCode.value = "";
+lblTable.innerHTML = "";
+cmbType.selectedIndex = 0;
+
+if(chkThumb.checked){
+	txtWidth.disabled=false;
+	chkLink.disabled=false;
+} else{
+	txtWidth.disabled=true;
+	chkLink.disabled=true;
+}
+
+if(chkBorder.checked){
+	txtBorColor.disabled=false;
+} else{
+	txtBorColor.disabled=true;
+}
+
+}
+
+
+function chkThumb_onclick() {
+
+if(chkThumb.checked){
+	txtWidth.disabled=false;
+	chkLink.disabled=false;
+} else{
+	txtWidth.disabled=true;
+	chkLink.disabled=true;
+}
+
+}
+
+function chkBorder_onclick() {
+
+if(chkBorder.checked){
+	txtBorColor.disabled=false;
+} else{
+	txtBorColor.disabled=true;
+}
+
+}
+
+function txtCode_onfocus() {
+	txtCode.select(txtCode.innerText);
+}
+
+function txtCode_onclick() {
+	txtCode.select(txtCode.innerText);
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY bgcolor=#fafae1 LANGUAGE=javascript>
+
+<DIV class="main">
+<DIV class="header">
+	<script type="text/javascript">
+        writepics(0);
+    </script>
+</DIV>
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+<!-- FlexSlider -->
+<script defer src="../js/jquery.flexslider.js"></script>
+
+<script type="text/javascript">
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide",
+    animationLoop: true,
+    itemWidth: 100,
+    itemMargin: 5,
+  });
+});
+</script>
+
+
+<DIV class="sidebar">
+<div class=menubacknav align=center><A href="http://silvinscorner.awardspace.com/">Home</A></div>
+<div class=menubacknav align=center><A href="http://silvinscorner.awardspace.com/icontable/">Icon Table Generator</A></div>
+<div class=menubacknav align=center><A href="http://silvinscorner.awardspace.com/bannertable/">Picspam Generator</A></div>
+<div class=menubacknav align=center><A href="http://silvinscorner.awardspace.com/profilemaker/">Profile Generator</A></div>
+<div class=menubacknav align=center><A href="http://silvinscorner.awardspace.com/votecounter/">Votes Counter</A></div>
+<br>
+<div class=menuback align=center><A href="http://sql-girl.livejournal.com/" target=blank_>sql_girl @ livejournal</A></div>
+<div class=menuback align=center><A href="http://community.livejournal.com/nutty_musings/" target=blank_>nutty musings @ livejournal</A></div>
+<!--<p align=right>Any suggestion, question or comment are always welcome.</p><p>So feel free to leave me some feedback <a href="feedback.htm">here</a> :) </p>-->
+<br>
+<div class=menubackfb><p>Any suggestion, question or comment are always welcome.<br><br>So feel free to leave me some feedback <a href="http://silvinscorner.awardspace.com/feedback/">here</a> :)</p></div>
+<div class=menubackcred><p>Are you looking for fanart?<br>Check out <A href="http://community.livejournal.com/nutty_musings/" target=blank_>nutty_musings</A><br><br>There you will find all of <a href="http://geekluvinskater.livejournal.com" target=blank_>geekluvinskater</a>'s<br>art and mine!</p></div>
+<p class=menutitle></p>
+<p><script type="text/javascript">
+  <!-- 
+  lastModified();
+  // -->
+</script></p>
+</DIV>
+<DIV class="content" id=DIV1>
+<p id="start"><h1>Icon Table Generator <font size=1 face=tahoma>[by sql_girl@livejournal]</font></h1>
+<P>With this generator, you can create personalized tables to show not only icons but any kind of graphics. For bigger graphics you can have thumbnails to make the table look better. You can set backgrounds, colors, numbers, borders.</P>
+<p>Have fun :)</P><br>
+<P></P>
+<h2>Uploads and Settings</h2>
+<p>If you dont know how to start, see <A href="#howto">instructions</A> on how to use.</p>
+<br>
+<table>
+	<tr><td valign=top>Uploading Type:</td>
+    	<td valign=top><SELECT id="cmbType" style="WIDTH: 124px" LANGUAGE=javascript onChange="return cmbType_onchange()">
+			<OPTION selected index="0">Single Upload</OPTION><OPTION index="1">Multiple Upload</OPTION></SELECT></td></tr>
+	<tr><td valign=top><LABEL  id="lblTypeTitle">Image Url:</LABEL></td>
+    	<td valign=top><LABEL id="lblTypeText"><INPUT id="txtImg" style="WIDTH: 377px; HEIGHT: 22px" size=48 onKeyDown="return enter_url(event)"></LABEL></td>
+     	<td valign=top><INPUT id="btnAdd" type=button value="Add" LANGUAGE=javascript onClick="return btnAdd_onclick()"></td></tr>
+	<tr><td valign="top">All Images:</td>
+    	<td valign="top"><SELECT id="lstUrls" style="WIDTH: 376px; HEIGHT: 134px" size=2 multiple LANGUAGE=javascript onkeydown="return elimina(event)"></SELECT></td>
+        <td valign="top"><INPUT id="btnUp" type=button value="Up" LANGUAGE=javascript onClick="return btnUp_onclick()"><br>
+			<INPUT id="btnDown" type=button value="Down" LANGUAGE=javascript onClick="return btnDown_onclick()"><br><br>
+			<INPUT id="btnDelete" type=button value="Delete" LANGUAGE=javascript onClick="return btnDelete_onclick()"></td></tr>
+	<tr><td>Images per row: </td>
+    	<td><SELECT id="cmbCols" style="WIDTH: 59px">
+		<OPTION selected value=1>1</OPTION><OPTION value=2>2</OPTION><OPTION value=3>3</OPTION><OPTION value=4>4</OPTION><OPTION value=5>5</OPTION><OPTION value=6>6</OPTION><OPTION value=7>7</OPTION></SELECT></td></tr>
+    <TR><td>Table Background Color:</td>
+		<td><INPUT id="txtBgColor" style="WIDTH: 122px; HEIGHT: 22px" size =15>&nbsp;(eg. #000000)</td></TR>
+    <TR><td>Table Alignment:</td>
+    	<td><SELECT name="cmbAlign" id="cmbAlign" style="WIDTH: 124px" onChange="return cmbType_onchange()" LANGUAGE=javascript>
+	        <option selected>Left</option><option>Center</option><option>Right</option></SELECT></td></TR>
+	<!--<TR><td>Outgoing code for:</td><td><p><SELECT id="cmbCodeType" style="WIDTH: 124px"><OPTION selected index="0">Websites</OPTION><OPTION index="1">Forums</OPTION></SELECT></p></td></TR>-->
+	<TR><td>Image Border:</td>
+    	<td><INPUT type=checkbox id="chkBorder" name=chkBorder LANGUAGE=javascript onClick="return chkBorder_onclick()"></td></TR>
+	<TR><td>Image Border Color:</td>
+    	<td><INPUT id="txtBorColor" style="WIDTH: 122px; HEIGHT: 22px" size =15>&nbsp;(eg. #000000)</td></TR><TR>
+	
+    <tr><td colspan=3><br></td></tr>
+	<TR height=30 valign=center><td colspan=3><h4>Settings for tables with Numbers:</h4></td></TD></TR>
+	<tr><td>Numbers Position: </td>
+    	<td><SELECT id="cmbPos" style="WIDTH: 124px">
+			<OPTION selected index="0">None</OPTION><OPTION index="1">On the left of each icon</OPTION><OPTION index="2">Under each icon</OPTION><OPTION index="3">Above each icon</OPTION></SELECT></td></tr>
+	<TR><td>Cells Background Color:</td>
+    	<td><INPUT id="txtCellColor" style="WIDTH: 122px; HEIGHT: 22px" size =15>&nbsp;(eg. #000000)</td></TR>
+	<TR><td>Font Color:</td>
+    	<td><INPUT id="txtFontColor" style="WIDTH: 122px; HEIGHT: 22px" size =15>&nbsp;(eg. #000000)</td></TR>
+	<TR><td>Start Number:</td>
+    	<td><INPUT id="txtStartNumber" style="WIDTH: 122px; HEIGHT: 22px" size =15 maxLength=15 value=1></td></TR>
+	<TR><td>Optional Text Before Number:</td>
+    	<td><INPUT id="txtOptText" style="WIDTH: 122px; HEIGHT: 22px" size =15 maxLength=15>&nbsp;(eg. 'Picture', '#', etc.)</td></TR>
+	
+    <tr><td colspan=3><br></td></tr>
+	<TR height=30 valign=center><td colspan=3><h4>Settings for tables with bigger images (banners, headers, etc):</h4></td></TD></TR>
+	<TR><td>Make Thumbnails:</td>
+    	<td><INPUT type=checkbox id="chkThumb" name=chkThumb LANGUAGE=javascript onClick="return chkThumb_onclick()"></td></TR>
+	<TR><td>Thumbnails width:</td>
+    	<td><INPUT id="txtWidth" style="WIDTH: 122px; HEIGHT: 22px" size =15>&nbsp;Default Value = 230</td></TR>
+	<TR><td>Link to the image:</td>
+    	<td><INPUT type=checkbox id="chkLink" name=chkLink></td></TR>
+
+	<tr><td colspan=3><br></td></tr>
+	<tr><td align="right" colspan=3><INPUT id="btnPreview" type=button value="Preview" LANGUAGE=javascript onClick="return preview()">
+			<INPUT id="btnClear" type=button value="Clear" LANGUAGE=javascript onClick="return btnClear_onclick()"></td></tr>
+</table><!-- </DIV><HR><DIV class="content"> -->
+
+<p><h2 id="preview">Table Preview</h2>
+<P></P>
+<p id="lblTable"></p>
+<br>
+<P align=left><TEXTAREA language=javascript id=txtCode style="WIDTH: 570px; HEIGHT: 152px" onFocus="return txtCode_onfocus()" onClick="return txtCode_onclick()" rows=8 cols=40></TEXTAREA>&nbsp;</P><!-- </DIV><HR><DIV class="content"> -->
+<p align=right><A href="#start">[Back to the top]</A></p>
+<p><h2 id="howto">Instructions</h2>
+<P></P>
+<p>Paste the image url in the text box and click on "Add". The image will 
+be added to the Images List and the Table Code will be updated in the Preview section.</p>
+<p>You can chose between "Single Uploading" and "Multiple Uploading". Using the "Multiple Uploading", you can upload more than one picture in just one step.
+ Paste the Images Urls separated by ";" then press "Add" and all the pictures will be uploaded.</p>
+<p>Chose how many columns you want for the table. Tables can have from 1 to 7 columns. 
+You can also set the background color for the table. This optiont is optional.</p><!--<p>Then you need to chose between Websites Code or Forums Code. The first one uses HTML tags (eg. &lt;table&gt;, &lt;img&gt;, etc), the second one is 
+  prepare to work in Forums posts using tags like [link], [img], etc.</P> -->
+<p>In any moment you can sort the images in the list using de "Up" and "Down" buttons. You can also delete any image by selecting it and click on "Delete". 
+You can also delete them all at once by selecting all of them.</p>
+<p>After changing any of the preferences, you can click on "Preview" to see the Table updated. Click on "Clear" to
+clear Table Code box.</p>
+<br>
+<h4>Tables with Numbers:</h4>
+<p>There is the posibility of setting cells with numbers. This can be placed on the left, above or under the images.
+If you chose to have numbers you can set the color for backgrounds and fonts. Again, color settings are optional.</p>
+<p>You can also set a Start Number in case 
+you want the first number to be other than 1.</p>
+<br>
+<h4>Tables with with bigger images:</h4>
+<p>You can also make tables for bigger images like banners, headers, wallpapers, etc. For this, you can check 
+the "Make Thumbnails" option and set the width for those thumbnails. If you dont set a width, 
+by default thumbnails width will be 230 pixels.</p>
+<p>You can add a link to the image by checking the "Link to the image" option.</p>
+<p align=right><A href="#start">[Back to the top]</A></p>
+<!-- <P class="sep"></P> -->
+<p class="footer">Icontable Generator Copyright © 2007 by sql_girl</p>
+</DIV></DIV></BODY>
+</HTML>
