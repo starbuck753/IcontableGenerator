@@ -1,5 +1,5 @@
 # Icontable Generator (by sql_girl at LiveJournal)
-Webapp that generates HTML code to display icons/graphics in nice and clean personalized tables. 
+Webapp that generates HTML code to display icons/graphics in nice and clean personalized tables. You can check the site [here](https://starbuck753.github.io/IcontableGenerator/).
 
 ## Features
 * Adding images links one at a time or in a batch separated by semicolon.
