@@ -2,7 +2,7 @@
 Webapp that generates HTML code to display icons/graphics in nice and clean personalized tables. 
 
 ## Features
-* Addind images links one at a time or in a batch separated by semicolon.
+* Adding images links one at a time or in a batch separated by semicolon.
 * Customization of table style: Images per row, Background Color, Alignment.
 * Customization of cell style: Image Border Setup and Color.
 * Adding Numbers to cells and customization: Numbers Position, Background Color, Font Color, Start Number, Optional Text Before Number.
