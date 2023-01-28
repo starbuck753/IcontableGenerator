@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="../js/flexslider.css" type="text/css" media="screen" />
 <script type="text/javascript" src="funcs.js"></script>
 <script type="text/javascript" src="../mainfuncs.js"></script>
+<script type="text/javascript" src="../carousel.js"></script>
 <SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
 <!--
 
@@ -70,29 +71,11 @@ function txtCode_onclick() {
 <BODY bgcolor=#fafae1 LANGUAGE=javascript onLoad="return window_onload()">
 
 <DIV class="main">
-<DIV class="header">
-	<script type="text/javascript">
-        writepics(0);
-    </script>
-</DIV>
-
-<!-- jQuery -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
-
-<!-- FlexSlider -->
-<script defer src="../js/jquery.flexslider.js"></script>
-
-<script type="text/javascript">
-$(window).load(function() {
-  $('.flexslider').flexslider({
-    animation: "slide",
-    animationLoop: true,
-    itemWidth: 100,
-    itemMargin: 5,
-  });
-});
-</script>
+	<DIV class="header">
+		<div class="carousel">
+		  <div id="imagen"></div>
+		</div>
+	</DIV>
 
 
 <DIV class="sidebar">

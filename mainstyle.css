@@ -10,27 +10,27 @@ H1{
 	padding: 5px 10px;
 	margin-top: 4px;;
 	border-right: 6px solid #4395b3;
-	//font-weight: bold;
+	/*font-weight: bold;*/
 }
 
 H2{
-	color: #66944d; //#63aeed; //#03627d;
+	color: #66944d; /*#63aeed; #03627d;*/
 	border-bottom: 4px solid #cbf4a1;
-	//border-bottom: 1px solid #8fcbff; //#b0e6f5;
+	/*border-bottom: 1px solid #8fcbff;*/ /*#b0e6f5;*/
 	font: 14pt "trebuchet ms", arial, georgia, verdana, sans-serif;
 	padding: 3px 0 4px 0;
 	margin-bottom: 5px;
-	//margin: 0;
+	/*margin: 0;*/
 }
 
 H3{
 	color: #03627d;
-	//border-bottom: 1px solid #b0e6f5;
+	/*border-bottom: 1px solid #b0e6f5;*/
 	font: 12pt "trebuchet ms", arial, georgia, verdana, sans-serif;
 	padding: 3px 0 4px 0;
 	margin-bottom: 5px;
-	//margin: 0;
-	font-weight::bold;
+	/*margin: 0;*/
+	font-weight:bold;
 }
 
 h4{ 
@@ -44,13 +44,13 @@ P.header {
 	font: 13pt "trebuchet ms", arial, georgia, verdana, sans-serif;
 	padding: 5px 0 4px 0;
 	margin-bottom: 5px;
-	//text-align:right;
-	//float:right;
+	/*text-align:right;*/
+	/*float:right;*/
 	border-bottom: 2px solid #cbf4a1;
 }
 
 P.header img {
-	//border: 1px solid #397687;
+	/*border: 1px solid #397687;*/
 	padding: 6px;
 	border: 0px; 
 }
@@ -75,7 +75,7 @@ strong, b {
 
 
 a, a:link, a:visited, a:active {
-	color: #dc3562; //#1ea4ca;
+	color: #dc3562; /*#1ea4ca;*/
 	text-decoration: none;
 }
 
@@ -102,7 +102,7 @@ a:hover {
 
 DIV.main{
 	width: 970px;
-	//border-left: 1px dotted #CCCCCC;
+	/*border-left: 1px dotted #CCCCCC;*/
 	font-family: verdana, sans-serif;
 	font-size: 11px;
 	margin: auto;
@@ -114,11 +114,11 @@ DIV.main{
 DIV.content{
 	float:right;
 	width:730px;
-	//margin-top:20px;
+	/*margin-top:20px;*/
 	margin: 0px auto;
 	margin-bottom:20px;
 	padding: 0px 10px;
-	//border-left: 1px dotted #CCCCCC;
+	/*border-left: 1px dotted #CCCCCC;*/
 	font-family: verdana, sans-serif;
 	font-size: 11px;
 }
@@ -131,7 +131,7 @@ DIV.content p{
 DIV.header{
 	text-align:right;
 	margin-top:20px;
-	//background: #91c6f3;
+	/*background: #91c6f3;*/
 	padding: 0 10px;
 }
 
@@ -140,17 +140,17 @@ DIV.sidebar{
 	width:180px;
 	margin: 0 auto;
 	margin-bottom:18px;
-	//margin-left:10px;
+	/*margin-left:10px;*/
 	padding: 10px;
 	color:#66944d;
 	FONT-FAMILY: tahoma, verdana;
 	font-size: 10px;
-	//font-weight:bold;
+	/*font-weight:bold;*/
 	text-align:right;
 }
 
 DIV.result{
-	//height: 200px;
+	/*height: 200px;*/
 	padding: 15px;
 }
 
@@ -165,7 +165,7 @@ a.menu:link {
 	font-size: 7pt;
 	line-height: 14px;
 	border: none;
-	//border-bottom: 1px dotted #CCCCCC;
+	/* border-bottom: 1px dotted #CCCCCC; */
 	display: block;
 	padding: 2px 0 0 13px;
 	text-transform: lowercase;
@@ -173,7 +173,7 @@ a.menu:link {
 
 a.menu:hover{
 	text-decoration: none;
-	//color:#ffffff;
+	/* color:#ffffff; */
 }
 
 
@@ -208,7 +208,7 @@ p.footer {
 }
 
 .menuback a{
-	//background: url(images/menu_gr.png) no-repeat top center;
+	/* background: url(images/menu_gr.png) no-repeat top center; */
 	background-color: #defbcf;
 	font-family: century gothic, arial, sans-serif;
 	height: 20px;
@@ -223,12 +223,12 @@ p.footer {
 }
 
 .menuback a:hover {
-	//background: url(images/menuh_gr.png) no-repeat top center;
+	/* background: url(images/menuh_gr.png) no-repeat top center; */
 	background-color: #c0e6ab;
 }
 
 .menubacknav a{
-	//background: url(images/menu_pr.png) no-repeat top center;
+	/* background: url(images/menu_pr.png) no-repeat top center; */
 	background-color: #fbe7ed;
 	font-family: century gothic, arial, sans-serif;
 	height: 20px;
@@ -243,13 +243,13 @@ p.footer {
 }
 
 .menubacknav a:hover {
-	//background: url(images/menuh_pr.png) no-repeat top center;
+	/* background: url(images/menuh_pr.png) no-repeat top center; */
 	background-color:#ffc7d6;
 }
 
 
 .menubackfb {
-	//background: url(images/menu_or.png) no-repeat top center;
+	/* background: url(images/menu_or.png) no-repeat top center; */
 	background-color:#fcebd2;
 	font-family: century gothic, arial, sans-serif;
 	font-size: 9pt;
@@ -262,7 +262,7 @@ p.footer {
 	border-left: 6px solid #f3a73b;
 }
 .menubackcred {
-	//background: url(images/menu_bl.png) no-repeat top center;
+	/* background: url(images/menu_bl.png) no-repeat top center; */
 	background-color:#d7e7f4;
 	font-family: century gothic, arial, sans-serif;
 	font-size: 9pt;
@@ -314,4 +314,28 @@ p.tabletitle {
 	color:#333333;
 	vertical-align:top;
 	padding: 4x;
+}
+
+
+/* Carousel */
+.carousel {
+	/*max-width: 800px;*/
+	margin: 0 auto;
+	display: flex;
+}
+
+#imagen {
+	margin: 0 auto;
+	height: 128px;
+	background-size: cover;
+}
+
+#imagen p {
+	background-color: #fff;
+	border: #eaead9 1px solid;
+	border-radius: 10px;
+	padding: 6px;
+}
+.carouselimg {
+	padding: 0 2px;
 }

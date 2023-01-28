@@ -16,52 +16,46 @@
 <link rel="stylesheet" href="../js/flexslider.css" type="text/css" media="screen" />
 <script type="text/javascript" src="funcs.js"></script>
 <script type="text/javascript" src="../mainfuncs.js"></script>
+<script type="text/javascript" src="../carousel.js"></script>
 <SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
 <!--
 
 function window_onload() {
+	txtCode.value = "";
+	lblTable.innerHTML = "";
+	cmbType.selectedIndex = 0;
 
-txtCode.value = "";
-lblTable.innerHTML = "";
-cmbType.selectedIndex = 0;
+	if(chkThumb.checked){
+		txtWidth.disabled=false;
+		chkLink.disabled=false;
+	} else{
+		txtWidth.disabled=true;
+		chkLink.disabled=true;
+	}
 
-if(chkThumb.checked){
-	txtWidth.disabled=false;
-	chkLink.disabled=false;
-} else{
-	txtWidth.disabled=true;
-	chkLink.disabled=true;
+	if(chkBorder.checked){
+		txtBorColor.disabled=false;
+	} else{
+		txtBorColor.disabled=true;
+	}
 }
-
-if(chkBorder.checked){
-	txtBorColor.disabled=false;
-} else{
-	txtBorColor.disabled=true;
-}
-
-}
-
 
 function chkThumb_onclick() {
-
-if(chkThumb.checked){
-	txtWidth.disabled=false;
-	chkLink.disabled=false;
-} else{
-	txtWidth.disabled=true;
-	chkLink.disabled=true;
-}
-
+	if(chkThumb.checked){
+		txtWidth.disabled=false;
+		chkLink.disabled=false;
+	} else{
+		txtWidth.disabled=true;
+		chkLink.disabled=true;
+	}
 }
 
 function chkBorder_onclick() {
-
-if(chkBorder.checked){
-	txtBorColor.disabled=false;
-} else{
-	txtBorColor.disabled=true;
-}
-
+	if(chkBorder.checked){
+		txtBorColor.disabled=false;
+	} else{
+		txtBorColor.disabled=true;
+	}
 }
 
 function txtCode_onfocus() {
@@ -79,29 +73,11 @@ function txtCode_onclick() {
 <BODY bgcolor=#fafae1 LANGUAGE=javascript>
 
 <DIV class="main">
-<DIV class="header">
-	<script type="text/javascript">
-        writepics(0);
-    </script>
-</DIV>
-
-<!-- jQuery -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
-
-<!-- FlexSlider -->
-<script defer src="../js/jquery.flexslider.js"></script>
-
-<script type="text/javascript">
-$(window).load(function() {
-  $('.flexslider').flexslider({
-    animation: "slide",
-    animationLoop: true,
-    itemWidth: 100,
-    itemMargin: 5,
-  });
-});
-</script>
+	<DIV class="header">
+		<div class="carousel">
+		  <div id="imagen"></div>
+		</div>
+	</DIV>
 
 
 <DIV class="sidebar">
