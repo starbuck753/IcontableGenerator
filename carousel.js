@@ -27,7 +27,7 @@ window.onload = function () {
         home = phome;
     }
     function pasarFoto() {
-        if(posicionActual >= 9) {
+        if(posicionActual >= 8) {
             posicionActual = 0;
         } else {
             posicionActual++;
