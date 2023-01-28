@@ -348,3 +348,29 @@ if(cmbType.selectedIndex==0){
 }
 
 }
+
+function chkThumb_onclick() {
+	if(chkThumb.checked){
+		txtWidth.disabled=false;
+		chkLink.disabled=false;
+	} else{
+		txtWidth.disabled=true;
+		chkLink.disabled=true;
+	}
+}
+
+function chkBorder_onclick() {
+	if(chkBorder.checked){
+		txtBorColor.disabled=false;
+	} else{
+		txtBorColor.disabled=true;
+	}
+}
+
+function txtCode_onfocus() {
+	txtCode.select(txtCode.innerText);
+}
+
+function txtCode_onclick() {
+	txtCode.select(txtCode.innerText);
+}

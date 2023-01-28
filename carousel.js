@@ -23,6 +23,10 @@ window.onload = function () {
     function isroot(){
         return (document.head.id == "root");
     }
+    function setstate(){
+        return (document.head.id == "setstate");
+    }
+
     function pasarFoto() {
         if(posicionActual >= 8) {
             posicionActual = 0;
@@ -60,4 +64,26 @@ window.onload = function () {
     // Inicio
     renderizarimagen();
     intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG);
+
+    // For Icon and Banner tables set the initial state
+    if (setstate()){
+        txtCode.value = "";
+        lblTable.innerHTML = "";
+        cmbType.selectedIndex = 0;
+        
+        if(chkThumb.checked){
+            txtWidth.disabled=false;
+            chkLink.disabled=false;
+        } else{
+            txtWidth.disabled=true;
+            chkLink.disabled=true;
+        }
+        
+        if(chkBorder.checked){
+            txtBorColor.disabled=false;
+        } else{
+            txtBorColor.disabled=true;
+        }
+    }
+
 } 
