@@ -228,3 +228,12 @@ lines[5] = "tb_ns_bite_pvw.png|tb_ns_bite";
 return lines;
 
 }
+
+
+function txtCode_onfocus() {
+	txtCode.select(txtCode.innerText);
+}
+
+function txtCode_onclick() {
+	txtCode.select(txtCode.innerText);
+}
