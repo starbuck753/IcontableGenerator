@@ -25,7 +25,6 @@ txtFile.send();
 }
 
 
-
 function selProfiles(){
 
 var lb = document.getElementById('lstProfiles');
@@ -165,17 +164,14 @@ tabProfile.innerHTML = tmpStr;
 
 function selectProfile(strProfile) {
 
-selProfile = strProfile;
+	selProfile = strProfile;
 
+	if (PageId.value==2){
+		//Cargar Specific Settings
+		
+	}
 
-if (PageId.value==2){
-	//Cargar Specific Settings
-	
-}
-
-
-return preview();
-
+	return preview();
 }
 
 

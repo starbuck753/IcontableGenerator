@@ -8,7 +8,7 @@
 	<script type="text/javascript" src="../carousel.js"></script>
 </HEAD>
 
-<BODY bgcolor=#fafae1 LANGUAGE=javascript onLoad="return window_onload()">
+<BODY LANGUAGE=javascript>
 <DIV class="main">
 	<DIV class="header">
 		<div class="carousel">
@@ -47,54 +47,79 @@
 <table>
 	<tr><td valign=top>Uploading Type:</td>
     	<td valign=top><SELECT id="cmbType" style="WIDTH: 124px" LANGUAGE=javascript onChange="return cmbType_onchange()">
-			<OPTION selected index="0">Single Upload</OPTION><OPTION index="1">Multiple Upload</OPTION></SELECT></td></tr> 
+			<OPTION selected index="0">Single Upload</OPTION><OPTION index="1">Multiple Upload</OPTION></SELECT></td>
+	</tr> 
 	<tr><td valign=top><LABEL id="lblExtraText">Text:</LABEL></td>
     	<td valign=top><LABEL id="lblExtraText"><INPUT id="txtImgText" style="WIDTH: 377px; HEIGHT: 22px" size=48 onKeyDown="return enter_txt(event)"></LABEL></td>
-        <td valign=top><INPUT id="btnAddTxt" type=button value="Add" LANGUAGE=javascript onClick="return btnAddTxt_onclick()"></td></tr>
+        <td valign=top><INPUT id="btnAddTxt" type=button value="Add" LANGUAGE=javascript onClick="return btnAddTxt_onclick()"></td>
+	</tr>
 	<tr><td valign=top><LABEL  id="lblTypeTitle">Image Url:</LABEL></td>
     	<td valign=top><LABEL id="lblTypeText"><INPUT id="txtImg" style="WIDTH: 377px; HEIGHT: 22px" size=48 onKeyDown="return enter_url(event)"></LABEL></td>
-        <td valign=top><INPUT language=javascript id="btnAdd" onClick="return btnAdd_onclick()" type=button value=Add></td></tr>
+        <td valign=top><INPUT language=javascript id="btnAdd" onClick="return btnAdd_onclick()" type=button value=Add></td>
+	</tr>
 	<tr><td valign="top">All Images:</td>
     	<td valign="top"><SELECT id="lstUrls" style="WIDTH: 376px; HEIGHT: 134px" size=2 multiple LANGUAGE=javascript onkeydown="return elimina(event)"></SELECT></td>
         <td valign="top"><INPUT id="btnUp" type=button value="Up" LANGUAGE=javascript onClick="return btnUp_onclick()"><br>
 			<INPUT id="btnDown" type=button value="Down" LANGUAGE=javascript onClick="return btnDown_onclick()"><br><br>
-			<INPUT id="btnDelete" type=button value="Delete" LANGUAGE=javascript onClick="return btnDelete_onclick()"></td></tr>
+			<INPUT id="btnDelete" type=button value="Delete" LANGUAGE=javascript onClick="return btnDelete_onclick()"></td>
+	</tr>
 	<!--<tr><td>Images per row: </td><td><SELECT id="cmbCols" style="WIDTH: 59px">
 		<OPTION selected value=1>1</OPTION><OPTION value=2>2</OPTION><OPTION value=3>3</OPTION><OPTION value=4>4</OPTION><OPTION value=5>5</OPTION><OPTION value=6>6</OPTION><OPTION value=7>7</OPTION></SELECT></td></tr>-->
 	<TR><td>Table Background Color:</td>
-		<td><INPUT id="txtBgColor" style="WIDTH: 122px; HEIGHT: 22px" size =15>&nbsp;(eg. #000000)</td></TR>
+		<td><INPUT type="color" id="txtBgColor" onchange="clickColor(0, -1, -1, 5)" value="#ffffff" style="WIDTH: 122px; HEIGHT: 22px"></td>
+	</TR>
 	<TR><td>Table Alignment:</td>
 		<td><SELECT name="cmbAlign" id="cmbAlign" style="WIDTH: 124px" onChange="return cmbType_onchange()" LANGUAGE=javascript>
-        	<option selected>Left</option><option>Center</option><option>Right</option></SELECT></td></TR>
+				<option selected>Left</option>
+				<option>Center</option>
+				<option>Right</option>
+			</SELECT>
+		</td>
+	</TR>
 	<!--<TR><td>Outgoing code for:</td><td><p><SELECT id="cmbCodeType" style="WIDTH: 124px">
 		<OPTION selected index="0">Websites</OPTION><OPTION index="1">Forums</OPTION></SELECT></p></td></TR>-->
 	<TR><td>Image Border:</td>
-    	<td><INPUT type=checkbox id="chkBorder" name=chkBorder LANGUAGE=javascript onClick="return chkBorder_onclick()"></td></TR>
+    	<td><INPUT type=checkbox id="chkBorder" name=chkBorder LANGUAGE=javascript onClick="return chkBorder_onclick()"></td>
+	</TR>
 	<TR><td>Image Border Color:</td>
-    	<td><INPUT id="txtBorColor" style="WIDTH: 122px; HEIGHT: 22px" size =15>&nbsp;(eg. #000000)</td></TR>
+    	<td><INPUT type="color" id="txtBorColor" onchange="clickColor(0, -1, -1, 5)" value="#dddddd" style="WIDTH: 122px; HEIGHT: 22px"></td>
+	</TR>
+	
 	<TR><tr><td colspan=3><br></td></tr>
 	<TR height=30 valign=center>
-    	<td colspan=3><strong>Settings for Optional Text:</strong></td></TD></TR>
-	<!--<tr><td>Text Position: </td><td><SELECT id="cmbPos" style="WIDTH: 124px">
-		<OPTION selected index="0">None</OPTION><OPTION index="1">On the left of each icon</OPTION><OPTION index="2">Under each icon</OPTION><OPTION index="3">Above each icon</OPTION></SELECT></td></tr>-->
+    	<td colspan=3><strong>Settings for Optional Text:</strong></td></TD>
+	</TR>
 	<TR><td>Text Alignment:</td>
 		<td><SELECT name="cmbTextAlign" id="cmbTextAlign" style="WIDTH: 124px" onChange="return cmbTextAlign_onchange()" LANGUAGE=javascript>
-        	<option selected>Left</option><option>Center</option><option>Right</option></SELECT></td></TR>
+				<option selected>Left</option>
+				<option>Center</option>
+				<option>Right</option>
+			</SELECT>
+		</td>
+	</TR>
 	<TR><td>Cells Background Color:</td>
-    	<td><INPUT id="txtCellColor" style="WIDTH: 122px; HEIGHT: 22px" size =15>&nbsp;(eg. #000000)</td></TR>
+    	<td><INPUT type="color" id="txtCellColor" onchange="clickColor(0, -1, -1, 5)" value="#ffffff" style="WIDTH: 122px; HEIGHT: 22px"></td>
+	</TR>
 	<TR><td>Font Color:</td>
-    	<td><INPUT id="txtFontColor" style="WIDTH: 122px; HEIGHT: 22px" size =15>&nbsp;(eg. #000000)</td></TR>
+    	<td><INPUT type="color" id="txtFontColor" onchange="clickColor(0, -1, -1, 5)" value="#000000" style="WIDTH: 122px; HEIGHT: 22px"></td>
+	</TR>
+
 	<tr><td colspan=3><br></td></tr> 
 	<TR height=30 valign=center><td colspan=3><strong>Settings for Thumbnails:</strong></td></TD></TR>
 	<TR><td>Make Thumbnails:</td>
-    	<td><INPUT type=checkbox id="chkThumb" name=chkThumb LANGUAGE=javascript onClick="return chkThumb_onclick()"></td></TR>
+    	<td><INPUT type=checkbox id="chkThumb" name=chkThumb LANGUAGE=javascript onClick="return chkThumb_onclick()"></td>
+	</TR>
 	<TR><td>Thumbnails width:</td>
-    	<td><INPUT id="txtWidth" style="WIDTH: 122px; HEIGHT: 22px" size =15>&nbsp;Default Value = 230</td></TR>
+    	<td><INPUT id="txtWidth" style="WIDTH: 122px; HEIGHT: 22px" size =15>&nbsp;Default Value = 230</td>
+	</TR>
 	<TR><td>Link to the image:</td>
-    	<td><INPUT type=checkbox id="chkLink" name=chkLink></td></TR>
+    	<td><INPUT type=checkbox id="chkLink" name=chkLink></td>
+	</TR>
+
 	<tr><td colspan=3><br></td></tr>
 	<tr><td align="right" colspan=3><INPUT id="btnPreview" type=button value="Preview" LANGUAGE=javascript onClick="return preview()">
-		<INPUT id="btnClear" type=button value="Clear" LANGUAGE=javascript onClick="return btnClear_onclick()"></P></td></tr>
+		<INPUT id="btnClear" type=button value="Clear" LANGUAGE=javascript onClick="return btnClear_onclick()"></P></td>
+	</tr>
 </table>
 <p><h2 id="preview">Table Preview</h2>
 <P></P>
